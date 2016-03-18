@@ -21,7 +21,6 @@ $( document ).ready(function() {
     dataType: "json",
     url: "/assets/properties.json"})
     .done(function(data) {
-      var dataLength = data.length;
       var deck = makeCards(data);
       $cardGrid.append(deck)
                .isotope('appended', deck);
