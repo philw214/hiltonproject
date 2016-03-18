@@ -1,0 +1,52 @@
+body {
+  background: $off_white;
+}
+#card-grid {
+  max-width: 1020px;
+  margin: auto;
+}
+
+#box-row {
+  max-width: 960px;
+  margin: 0 auto;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-top-color: #DEDEDE;
+  border-bottom-color: #DEDEDE;
+}
+.box {
+  background: $white;
+  display: inline-block;
+  height: 202px;
+  width: 310px;
+  margin: 64px 11px 72px 0;
+  vertical-align: top;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 983px) {
+  .box, .box:last-child {
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+    &:first-child {
+      margin-top: 64px;
+    }
+    &:last-child {
+      margin-bottom: 72px;
+    }
+    .box-title {
+      text-align: center;
+      margin-left: auto;
+    }
+    .view-more--btn{
+      margin-left: auto;
+    }
+  }
+}
+@media only screen and (max-width: 465px) {
+  .box {
+    width: 100%;
+  }
+}

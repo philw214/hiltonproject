@@ -1,0 +1,40 @@
+%gold--btn{
+  background: $gold;
+  display: inline-block;
+  width: 126px;
+  text-align: center;
+  font-family: "DidactGothic", sans-serif;
+  color: #FFFFFF;
+}
+.view-more--btn {
+  @extend %gold--btn;
+  margin-left: 32px;
+  padding: 11px 0;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 1.429;
+}
+.box-title {
+  font-family: "Montserrat", sans-serif;
+  color: #1D191A;
+  width: 80%;
+  line-height: 1.333;
+  display: inline-block;
+  margin: 29px 0 29px 32px;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.grid-item {
+  height: 192px;
+  width: 192px;
+  border: 1px solid black;
+  margin-bottom: 12px;
+}
+
+.card-image {
+  height: 192px;
+  width: 192px;
+}
