@@ -8,17 +8,23 @@ $( document ).ready(function() {
     }
   });
 
-  function makeCards() {
+  function makeCards(data) {
     var cards = '';
     for (var i = 0; i < 100; i++) {
-      cards += '<a class="grid-item"><img class="card-image" src="../assets/image.png"></a>';
+      cards += '<a class="grid-item" href="#"><img class="card-image" src="http://news.hiltonworldwide.com/100countries'+ data[i].image +'"></a>';
     }
     return $(cards);
   }
 
-  var deck = makeCards();
-
-  $cardGrid.append(deck)
-           .isotope('appended', deck);
+  $.ajax({
+    type: "GET",
+    dataType: "json",
+    url: "/assets/properties.json"})
+    .done(function(data) {
+      var dataLength = data.length;
+      var deck = makeCards(data);
+      $cardGrid.append(deck)
+               .isotope('appended', deck);
+  });
 
 });
