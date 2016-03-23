@@ -8,10 +8,14 @@ $( document ).ready(function() {
     }
   });
 
+  $("body").on('click', '.grid-item', function(e) {
+    $(this).toggleClass('flipped');
+  });
+
   function makeCards(data) {
     var cards = '';
-    for (var i = 0; i < 100; i++) {
-      cards += '<a class="grid-item" href="#"><img class="card-image" src="http://news.hiltonworldwide.com/100countries'+ data[i].image +'"></a>';
+    for (var i = 0; i < data.length; i++) {
+      cards += '<div class="grid-item"><div class="front"><img class="card-image" src="http://news.hiltonworldwide.com/100countries'+ data[i].image +'"></div><div class="back"></div></div>'
     }
     return $(cards);
   }
